@@ -1,0 +1,14 @@
+{
+	"name": "url2ways",
+	"version": "0.5.1",
+	"repository":{
+		"type": "git",
+		"url": "git@github.com:ruizfrontend/url2way.git"
+	},
+	"main": "url2way.js",
+	"dependencies": {
+		"angular": "*",
+		"jquery": "*",
+		"signalr": "*"
+	}
+}

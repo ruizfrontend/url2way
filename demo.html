@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>url2way sample file</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
+  <script src="http://estaticos.lab.eldiario.es/libs/l33teral-2.0.5/build/l33teral-latest.js"></script>
+
+  <script src="./assets/url2way.js"></script>
+
+</head>
+<body ng-app="u2wSample" ng-controller="u2wSampleController">
+  
+  <label for="">Name:</label>
+  <input type="text" ng-model="userData.name"><br>
+
+  <label for="">Surname:</label>
+  <input type="text" ng-model="userData.surname"><br>
+
+  <label for="">twitter:</label>
+  <input type="text" ng-model="autoProcess.twitter"><br>
+
+  <label for="">url:</label>
+  <input type="text" ng-model="autoProcess.url"><br>
+
+  <script>
+angular
+  .module('u2wSample', ['url2way'])
+  .controller('u2wSampleController', function($scope, url2way) {
+
+      // object to autoprocess
+    $scope.autoProcess = {
+      url: null,
+      twitter: 'ruizfrontend'
+    };
+
+      // invocation
+    url2way({
+      name: 'userData.name', // string invocation => no defaults
+      surname: ['userData.surname', null], // array invocation => [target, defaults]
+      'autoProcess': null,
+    }, $scope);
+
+  });
+  </script>
+
+</body>

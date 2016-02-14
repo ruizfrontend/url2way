@@ -1,0 +1,25 @@
+{
+  "name": "url2ways",
+  "version": "0.5.1",
+  "description": "AngularJs two way data binding query strings.",
+  "main": "url2way.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ruizfrontend/url2way.git"
+  },
+  "keywords": [
+    "angular",
+    "angularjs",
+    "two way binding",
+    "query url",
+    "service"
+  ],
+  "author": "David Ruiz López <ruizfrontend@gmail.com> (http://justinmaier.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruizfrontend/url2way/issues"
+  },
+  "homepage": "https://github.com/ruizfrontend/url2way",
+  "devDependencies": {},
+  "dependencies": {}
+}
