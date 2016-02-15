@@ -34,7 +34,11 @@ angular.module('url2way', [])
       $sc00pe = l33t($scope);
       settings = setts;
       
-      angular.forEach(settings, bindObject);
+      if(angular.isString(settings)) {
+        processValue(settings, settings, $sc00pe.tap(settings, null));
+      } else {
+        angular.forEach(settings, bindObject);
+      }
     };
 
 
@@ -50,7 +54,8 @@ angular.module('url2way', [])
           processValue(key, settings[key][0], settings[key][1]);
 
         } else if (angular.isString(settings[key])) { // settings passed as key: target
-          processValue(key, settings[key]);
+          console.log(settings[key], $sc00pe, $sc00pe.tap(settings[key], null));
+          processValue(key, settings[key], $sc00pe.tap(settings[key], null));
         }
       }
     };

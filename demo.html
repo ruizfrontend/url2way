@@ -8,7 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.js"></script>
   <script src="http://estaticos.lab.eldiario.es/libs/l33teral-2.0.5/build/l33teral-latest.js"></script>
 
-  <script src="./assets/url2way.js"></script>
+  <script src="./url2way.js"></script>
 
 </head>
 <body ng-app="u2wSample" ng-controller="u2wSampleController">
@@ -40,7 +40,7 @@ angular
     url2way({
       name: 'userData.name', // string invocation => no defaults
       surname: ['userData.surname', null], // array invocation => [target, defaults]
-      'autoProcess': null,
+      autoProcess: null,
     }, $scope);
 
   });
