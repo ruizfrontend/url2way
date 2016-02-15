@@ -4,8 +4,6 @@ AngularJs two way data binding query strings.
 You just define your bindings at the beginning of your controller, and your model will be filled with the url parameters. Additionally, when you change the model, the url changes to reflect the current model.  
 If you don't wan't to save
 
-@todo read defaults variables if not passed
-
 ##Installation
 
 ####Bower
@@ -23,6 +21,10 @@ Load the library and it's dependencies
 <script src="./l33teral-latest.js"></script>
 <script src="./url2way.js"></script>
 ```
+
+##Dependencies
+
+url2ways requires angularjs, [underscore](https://github.com/jashkenas/underscore) & [l33teral](https://github.com/nicholascloud/l33teral)
 
 ##Usage
 
